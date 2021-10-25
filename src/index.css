@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Lato", sans-serif;
+}
+
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #232741;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  z-index: 9999;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  z-index: 9999;
+  animation: fadein 3s;
+}
+
+header p {
+  color: white;
+}
+
+h1 {
+  color: white;
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+  font-weight: 300;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 16px;
+  transition: 0.4s;
+  z-index: 9999;
+}
+
+.search-box input {
+  display: block;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding: 16px;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.search-box:focus-within {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.results {
+  max-width: 768px;
+  margin: 0 auto;
+  z-index: 9999;
+}
+
+.result {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  transition: 0.4s;
+  animation: fadein 2s;
+  border: 1px solid white;
+}
+
+.result:hover {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.result h3 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.result-title {
+  opacity: 1;
+}
+
+.result p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.result p .searchmatch {
+  font-weight: 700;
+  color: white;
+}
+
+.result a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.result a:hover {
+  letter-spacing: 6px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .result:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50px);
+  }
+}
